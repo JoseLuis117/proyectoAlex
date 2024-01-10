@@ -1,0 +1,21 @@
+extends ./layout/index
+block contenido
+    nav.flex.justify-between.w-full.container.mt-8
+        p.text-2xl=nombreE?nombreE:"No iniciaste sesion"
+        a(class="text-2xl bg-black py-2 px-8 text-white rounded-md hover:bg-gray-700 cursor-pointer")  Ver perfil
+    section.container.flex.flex-wrap.gap-8.justify-center.mt-8
+        a(href="/auth/registrarVenta" class="flex flex-col items-center gap-4 border border-solid border-black p-4 hover:bg-orange-400 cursor-pointer")
+            img.w-20(src="/img/registrarVenta.svg")
+            p Registrar Venta
+        a(href="/auth/verProductos" class="flex flex-col items-center gap-4 border border-solid border-black p-4 hover:bg-orange-400 cursor-pointer")
+            img.w-20(src="/img/products.svg")
+            p Ver Productos
+        a(href="/auth/compraProveedor" class="flex flex-col items-center gap-4 border border-solid border-black p-4 hover:bg-orange-400 cursor-pointer")
+            img.w-20(src="/img/proveedor.png")
+            p Registrar Compra a Proveedor
+        a(class="flex flex-col items-center gap-4 border border-solid border-black p-4 hover:bg-orange-400 cursor-pointer")
+            img.w-20(src="/img/detalle.svg")
+            p Detalle Venta
+        a(class="flex flex-col items-center gap-4 border border-solid border-black p-4 hover:bg-orange-400 cursor-pointer")
+            img.w-20(src="/img/bus.svg")
+            p Ver Proveedores

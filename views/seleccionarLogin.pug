@@ -1,0 +1,13 @@
+extends ./layout/index.pug
+block contenido
+    div.w-full.flex.flex-col.justify-center.h-full.items-center.gap-8
+        h2.text-3xl.font-bold=pagina
+        .flex.gap-4
+            a.border.border-solid.border-black.p-8.flex.flex-col.items-center.gap-3(href="/auth/loginEmpleado" class="hover:bg-amber-400")
+                div
+                img.w-20(src="/img/empleado.png")
+                p.text-center Empleado
+            a.border.border-solid.border-black.p-8.flex.flex-col.items-center.gap-3(href="/auth/loginAdmin" class="hover:bg-amber-400")
+                div
+                img.w-20(src="/img/admin.png")
+                p.text-center Admin

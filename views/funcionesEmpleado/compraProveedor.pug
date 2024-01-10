@@ -1,0 +1,13 @@
+extends ../layout/index.pug
+block contenido
+    div.container.mt-12.flex.flex-col.items-center.w-full.gap-8
+        h1.font-bold.text-2xl=pagina
+        form.bg-gray-500.rounded-md.p-8.w-96.space-y-8(method="POST" action="/auth/compraProveedor")
+            input(type="number" name="id" placeholder="ID" class="bg-white rounded-md p-4 w-full text-center")
+            input(type="number" name="id_empleado" placeholder="ID_Empleado" class="bg-white rounded-md p-4 w-full text-center")
+            input(type="number" name="id_producto" placeholder="ID_Producto" class="bg-white rounded-md p-4 w-full text-center")
+            input(type="number" name="id_proveedor" placeholder="ID_Proveedor" class="bg-white rounded-md p-4 w-full text-center")
+            input(type="date" name="fecha" placeholder="Fecha" class="bg-white rounded-md p-4 w-full text-center")
+            if error
+                p.text-center.bg-red-600.text-white.font-bold.py-2=error
+            input(type="submit" value="Insertar" class="bg-black py-4 w-full text-white font-bold rounded-md hover:bg-gray-800 cursor-pointer")

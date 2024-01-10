@@ -1,0 +1,17 @@
+extends ./layout/index.pug
+block contenido
+    div.w-full.flex.flex-col.justify-center.h-full.items-center.gap-8
+        h2.text-3xl.font-bold=pagina
+        div.w-full
+            form.bg-white.max-w-sm.m-auto.p-8.space-y-6.border-black.border-solid.border.rounded-md.shadow-lg(method="post" action="/auth/loginAdmin")
+                if error
+                    p.text-center.bg-red-600.text-white.font-bold.py-2=error
+                div.flex.flex-col.gap-2
+                    label.text-center.font-bold.text-2xl(for="usuarioGerente")  Usuario
+                    input(name="usuario" id="usuarioGerente" type="text" class="border border-gray-400 p-2 rounded-md" placeholder="Tu usuario")
+                div.flex.flex-col.gap-2
+                    label.text-center.font-bold.text-2xl(for="passwordGerente")  Contraseña
+                    input(name="password" id="passwordGerente" type="text" class="border border-gray-400 p-2 rounded-md" placeholder="Tu Contraseña")
+                input(type="submit" class="bg-black text-white hover:bg-gray-900 cursor-pointer w-full py-2 rounded-md" value="Iniciar Sesion")
+                div
+                    a(class="text-md text-black hover:text-gray-800" href="/auth/tipoLogin") Volver

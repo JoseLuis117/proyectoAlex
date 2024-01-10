@@ -1,0 +1,20 @@
+extends ../layout/index
+block contenido
+    div.container.mt-12.flex.flex-col.items-center
+        h1.text-2xl.font-bold=pagina
+        table.w-full.border-collapse.mt-8
+            tr
+                th.border.border-black id_producto
+                th.border.border-black id_talla
+                th.border.border-black costo
+                th.border.border-black id_cat
+                th.border.border-black nombreProducto
+                th.border.border-black id_proveedor
+            each producto in productos
+                tr
+                td.border.border-black.text-center= producto.id_producto
+                td.border.border-black.text-center= producto.id_talla
+                td.border.border-black.text-center= producto.costo
+                td.border.border-black.text-center= producto.id_cat
+                td.border.border-black.text-center= producto.nombreProducto
+                td.border.border-black.text-center= producto.id_proveedor
